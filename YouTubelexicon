@@ -1,0 +1,97 @@
+Here’s a Python-coded dictionary app with a YouTube-inspired name: "YouTubeLexicon". It allows users to look up video-related terms and get their meanings from a predefined dictionary.
+
+# YouTubeLexicon - A YouTube-Inspired Dictionary App
+
+def main():
+    print("Welcome to YouTubeLexicon - Your Creator's Dictionary!")
+    print("=======================================================")
+
+    # Predefined dictionary
+    youtube_lexicon = {
+        "algorithm": "The system YouTube uses to recommend videos to viewers based on engagement, relevance, and history.",
+        "monetization": "The process of earning revenue from YouTube videos through ads, memberships, or other methods.",
+        "thumbnail": "The clickable image that represents a video and encourages viewers to click and watch.",
+        "SEO": "Search Engine Optimization, improving video visibility through optimized titles, tags, and descriptions.",
+        "engagement": "The interaction viewers have with content, including likes, comments, shares, and watch time.",
+        "analytics": "YouTube’s tool that provides data on video performance, including views, demographics, and retention.",
+        "CTR": "Click-Through Rate, the percentage of people who click on a video after seeing its thumbnail and title.",
+        "watch time": "The total amount of time viewers spend watching a video or channel.",
+        "subscriber": "A user who follows a channel to receive updates and notifications on new videos.",
+        "demonetization": "The removal of ads or revenue-earning opportunities from a video due to policy violations."
+    }
+
+    # Main loop
+    while True:
+        print("\nOptions:")
+        print("1. Search for a word")
+        print("2. List all words")
+        print("3. Exit")
+        choice = input("Choose an option (1/2/3): ")
+
+        if choice == "1":
+            word = input("\nEnter the word you want to look up: ").lower()
+            meaning = youtube_lexicon.get(word)
+            if meaning:
+                print(f"\n{word.capitalize()}: {meaning}")
+            else:
+                print(f"\nSorry, '{word}' is not in the YouTubeLexicon.")
+        elif choice == "2":
+            print("\nWords in the YouTubeLexicon:")
+            for word in sorted(youtube_lexicon.keys()):
+                print(f"- {word}")
+        elif choice == "3":
+            print("\nThank you for using YouTubeLexicon! Keep creating and growing!")
+            break
+        else:
+            print("\nInvalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
+
+
+---
+
+How It Works
+
+1. Word Lookup: Search for a YouTube-related term like "thumbnail" or "SEO" to see its definition.
+
+
+2. List All Words: View all the available words in the dictionary.
+
+
+3. Exit: Close the app.
+
+
+
+
+---
+
+Features
+
+Simple menu-based navigation.
+
+Predefined YouTube-related words and their meanings.
+
+Handles cases where a word is not found.
+
+
+
+---
+
+Example Run
+
+Welcome to YouTubeLexicon - Your Creator's Dictionary!
+=======================================================
+
+Options:
+1. Search for a word
+2. List all words
+3. Exit
+Choose an option (1/2/3): 1
+
+Enter the word you want to look up: thumbnail
+
+Thumbnail: The clickable image that represents a video and encourages viewers to click and watch.
+
+Let me know if you’d like to add more features like adding custom words or saving user-defined words!
+
